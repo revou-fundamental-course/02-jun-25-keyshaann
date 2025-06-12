@@ -1,1 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: -apple-system, sans-serif;
+}
+
+:root {
+    --bg-color: #ac9292;
+    --snd-bg-color: #7d5f5f;
+    --text-color: #fdfafa;
+    --main-color: #533a2e;
+}
+
+html {
+    font-size: 62.5%; 
+    overflow-x: hidden;
+}
+
+body {
+    background : var(--bg-color);
+    color:var(--text-color);
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.slide-container {
+    width: 100%;
+    max-width: 800px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.slide-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 400%;
+}
+
+.slide-wrapper img {
+    width: 100vw;
+    max-width: 800px;
+    flex-shrink: 0;
+}
+
+/* Header Section Code */
+
+.header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5%;
+    background: var(--bg-color);
+    backdrop-filter: blur(10px); 
+    transition: all 0.5s ease;
+}
+
+.logo {
+    font-size: 3rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.navbar a {
+    font-size: 1.9rem;
+    color: var(--text-color);
+    margin-left: 4rem;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.navbar a:hover,
+.navbar a:active {
+    color: var(--main-color); 
+}
+
+ #menu-icon {
+    font-size: 3.6rem;
+    color: var(--text-color);
+    cursor: pointer;
+    display: none;
+}
+
+/* Home Section Code */
  
+.home {
+    display: flex;   
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    padding: 8rem 5%;
+    min-height: 100vh;
+    gap: 3rem;
+}
+
+.home-content {
+     flex: 1;
+     margin-bottom:0 ;
+}
+
+.home-content p {
+     font-size: 3.7rem;
+     font-weight: 700;
+     margin-bottom: 1rem;
+     margin-top: 1rem;
+}
+span {
+    color: var(--text-color);
+}
+
+.home-content h1 {
+     font-size: 6rem;
+     font-weight: 700;
+     line-height: 1.3;
+     margin-bottom: 2rem;
+     margin-right: 5rem;
+}
+
+
+/* About Section code */
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    background: var(--bg-color);
+}
+
+.heading {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.about-content {
+    padding: 0 4rem;
+
+}
+
+.about-content h2 {
+    text-align: left;
+    line-height: 1.3;   
+}
+
+.about-content h3 {
+    font-size: 3rem;
+}
+
+.about-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 3rem;
+}
+
+/* Works Section Code */
+
+.works {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--bg-color);
+}
+
+.heading {
+    font-size: 6rem;
+    text-align: center;
+}
+
+.works-content {
+    padding: 0 4rem;
+}
+
+.works-content h2 {
+    text-align: left;
+    line-height: 1.3;
+}
+
+.works-content h3 {
+    font-size: 3rem;
+}
+
+.works-content p {
+    font-size: 1.6rem;
+    margin: 2rem 0 2rem;
+}
+
+/* Contact Section Code */
+
+.contact {
+    background: var(--snd-bg-color-);
+}
+
+.contact .heading {
+    text-align: center;
+}
+
+.contact h2 {
+    margin-bottom: 10rem;
+    color: var(--text-color);
+}
+
+.contact form {
+    max-width: 80rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom : 7rem;
+}
+
+.contact form .input-box {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact form .input-box input,
+.contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    margin: 0.7rem 0;
+    border-radius: 0.5rem;
+    border: 0.25rem solid var(--main-color);
+    background: var(--text-color);
+    color: var(--main-color);
+    font-size: 1.6rem;
+    resize: none;
+}
+
+.contact form .input-box input {
+    width: 49%;
+    margin: 0.7rem 0.35rem;
+}
+
+.contact form .btn {
+    margin-top: 2rem;
+}
+
+/* Footer Section Code  */
+
+.footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #7d5f5f;
+}
+
+
+.footer .copyright {
+   margin-top: 20px;
+   text-align: center;
+   font-size: 16px;
+   color: var(--text-color);
+}
+
+/* Responsive Design Code */
+
+@media (max-width: 1200px) {
+    html {
+        font-size: 55%;
+    }
+
+@media (max-width: 991px) {   
+    .header {
+        padding: 2rem 3%;
+    }
+    section {
+        padding: 10rem 3% ;
+    }
+
+    .about, .works, .contact {
+        padding: 2rem 5%;
+    }
+
+    .about-content, .works-content {
+        padding: 0;
+    }
+    .footer .copyright {
+        margin-top: 20px;
+        text-align: center;
+        padding: 2rem 3%;
+        font-size: 16px;
+        color: var(--text-color);
+
+    }
+}
+
+@media (max-width: 991px) {
+    #menu-icon { 
+        display: block;
+    }
+    .navbar {
+        position: absolute;
+        top : 100%;
+        right: -100%;
+        width: 255px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: var(--snd-bg-clor);
+        transition: all 0.5s ease;
+        backdrop-filter: blur(10px);
+    }
+    .navbar a {
+        display: block;
+        padding: 17px;
+        font-size: 22px;
+    }  
+    .navbar.active {
+        right: 0;
+    }
+    .home {
+        flex-direction: column;
+    }
+    .home-content h3 {
+        font-size: 2.6rem;
+    }
+    .home-content h1 {
+        font-size: 4.5rem;
+    }
+    .home-content {
+        order: 2;
+        margin-left: 1rem;
+    }
+    .home-img img {
+        width: 65vw;
+        margin-top: 4rem;
+    }
+    .about {
+        flex-direction: column;
+    }
+    .works {
+        flex-direction: column;
+    }
+
+}
+    
+@media (max-width: 617px) {
+    .home-img img {
+        width: 70vw;
+        margin-top: 8rem;
+    }
+}
+
+@media (max-width: 617px) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/* Banner Auto Slide  */
+
+}
